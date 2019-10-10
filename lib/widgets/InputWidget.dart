@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:messio/config/Palette.dart';
 
 class InputWidget extends StatelessWidget {
-  final TextEditingController textEditingController =
-      new TextEditingController();
+
+  final TextEditingController textEditingController = TextEditingController();
+
+
+   InputWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class InputWidget extends StatelessWidget {
               child: new IconButton(
                 icon: new Icon(Icons.face),
                 color: Palette.primaryColor,
-                onPressed: () {},
+                onPressed: ()=>{},
               ),
             ),
             color: Colors.white,
@@ -26,8 +29,7 @@ class InputWidget extends StatelessWidget {
           Flexible(
             child: Container(
               child: TextField(
-                style:
-                    TextStyle(color: Palette.primaryTextColor, fontSize: 15.0),
+                style: TextStyle(color: Palette.primaryTextColor, fontSize: 15.0),
                 controller: textEditingController,
                 decoration: InputDecoration.collapsed(
                   hintText: 'Type a message',
