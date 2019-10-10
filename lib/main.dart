@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/ConversationPageList.dart';
+import 'config/Palette.dart';
+import 'pages/RegisterPage.dart';
 
 void main() => runApp(Messio());
 
@@ -9,10 +10,11 @@ class Messio extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Messio',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Palette.primaryColor,
       ),
-      home: ConversationPageList(),
+      home: RegisterPage(),
     );
   }
 }
